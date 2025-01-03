@@ -17,7 +17,7 @@ const Main = () => {
           type="text"
           placeholder="Enter topic"
         />
-        <button className="hero__searchbar_button button">Search</button>
+        <button className="hero__searchbar_button">Search</button>
       </div>
     </main>
   );

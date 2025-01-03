@@ -8,7 +8,9 @@
   gap: 0px;
   opacity: 0px;
 
-  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  font-family: "Roboto-Medium", sans-serif;
+  line-height: 24px;
 
   display: flex;
   justify-content: space-between;
@@ -40,9 +42,6 @@
   color: #fff;
   background: transparent;
   border: none;
-  font-size: 18px;
-  font-family: "Roboto-Medium", sans-serif;
-  line-height: 24px;
 }
 
 .header__home::after {
@@ -65,7 +64,7 @@
   background: transparent;
   color: #fff;
   padding: 0;
-  margin: 0 0 0 42px;
+  margin-left: 42px;
 }
 
 .header__underline {
@@ -73,4 +72,24 @@
   height: 1px;
 
   background: #ffffff20;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 16px;
+  }
+
+  .header__left {
+    margin-left: 40px;
+  }
+
+  .header__right {
+    margin-right: 40px;
+  }
+
+  .header__button {
+    margin-left: 16px;
+    width: 152px;
+    height: 40px;
+  }
 }

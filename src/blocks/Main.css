@@ -2,7 +2,7 @@
 
 .hero {
   max-width: 1440px;
-  /* height: 576px; */
+  width: 100%;
   background-image: url(../assets/background.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,6 +48,8 @@
   border-radius: 100px;
   border: none;
   padding: 21px 208px 21px 24px;
+
+  color: #b6bcbf;
 }
 
 .hero__searchbar_button {
@@ -62,4 +64,48 @@
   border: none;
   background: #2f71e5;
   color: #fff;
+
+  cursor: pointer;
+}
+
+.hero__searchbar_button:hover {
+  background: #347eff;
+}
+
+.hero__searchbar_button:active {
+  background: #2a65cc;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
+
+  .hero__title {
+    width: 452px;
+    height: 80px;
+
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .hero__subtitle {
+    width: 452px;
+    height: 80px;
+
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 88px 0;
+
+    color: #ffffff;
+  }
+  .hero__searchbar_input {
+    width: 220px;
+    height: 22px;
+  }
+
+  .hero__searchbar_button {
+    width: 168px;
+    height: 64px;
+  }
 }
