@@ -1,0 +1,60 @@
+@import url("../index.css");
+
+.footer {
+  max-width: 1440px;
+  height: 80px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__left {
+  margin-left: 104px;
+}
+
+.footer__right {
+  margin-right: 104px;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: center;
+}
+
+.footer__button {
+  background: transparent;
+  border: none;
+  color: #1a1b22;
+  margin-right: 40px;
+  padding: 0;
+}
+
+.footer__link {
+  margin-right: 24px;
+}
+
+.github__icon {
+  width: 24px;
+  height: 24px;
+  background: url("../assets/github.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+}
+
+.facebook__icon {
+  width: 24px;
+  height: 24px;
+  background: url("../assets/facebook.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+}

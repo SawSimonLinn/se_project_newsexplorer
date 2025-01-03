@@ -1,12 +1,10 @@
-import React from 'react'
-import '../blocks/Navigation.css'
+import React from "react";
+import "../blocks/Navigation.css";
 
 const Navigation = () => {
-  return (
-    <div>
-      <h1>Navigation</h1>
-    </div>
-  )
-}
+  <div className="navigation__container">
+    <h1>Navigation</h1>
+  </div>;
+};
 
-export default Navigation
+export default Navigation;

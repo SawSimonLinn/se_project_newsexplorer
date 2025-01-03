@@ -1,0 +1,65 @@
+@import url("../index.css");
+
+.hero {
+  max-width: 1440px;
+  /* height: 576px; */
+  background-image: url(../assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-family: "Roboto-Regular", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero__title {
+  width: 608px;
+  height: 128px;
+  margin: 80px 0 32px 0;
+
+  font-family: "Roboto-Slab-Regular", sans-serif;
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 88px 0;
+
+  color: #ffffff;
+}
+
+.hero__searchbar {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.hero__searchbar_input {
+  width: 376px;
+  height: 22px;
+
+  border-radius: 100px;
+  border: none;
+  padding: 21px 208px 21px 24px;
+}
+
+.hero__searchbar_button {
+  position: absolute;
+
+  right: 0px;
+  width: 168px;
+  height: 64px;
+  padding: 0;
+
+  border-radius: 100px;
+  border: none;
+  background: #2f71e5;
+  color: #fff;
+}
