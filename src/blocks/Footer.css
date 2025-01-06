@@ -1,9 +1,10 @@
-@import url("../index.css");
+@import url('../index.css');
 
 .footer {
-  max-width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   height: 80px;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
   font-size: 18px;
   line-height: 24px;
 
@@ -14,6 +15,10 @@
 
 .footer__left {
   margin-left: 104px;
+}
+
+.footer__text {
+  color: #b6bcbf;
 }
 
 .footer__right {
@@ -31,6 +36,7 @@
   color: #1a1b22;
   margin-right: 40px;
   padding: 0;
+  cursor: pointer;
 }
 
 .footer__link {
@@ -40,21 +46,25 @@
 .github__icon {
   width: 24px;
   height: 24px;
-  background: url("../assets/github.png");
+  background: url('../assets/github.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   border: none;
+
+  cursor: pointer;
 }
 
 .facebook__icon {
   width: 24px;
   height: 24px;
-  background: url("../assets/facebook.png");
+  background: url('../assets/facebook.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   border: none;
+
+  cursor: pointer;
 }

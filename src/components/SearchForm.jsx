@@ -1,12 +1,15 @@
-import React from 'react'
-import '../blocks/SearchForm.css'
+import React from 'react';
+import '../blocks/SearchForm.css';
 
 const SearchForm = () => {
   return (
-    <div>
-      <h1>SearhForm</h1>
+    <div className='search__container'>
+      <h3 className='search__title'>Search results</h3>
+      <div className='search__results'>
+        <div className='search__results_card'></div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchForm
+export default SearchForm;
