@@ -1,0 +1,64 @@
+@import url('../index.css');
+
+.card__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  width: 400px;
+  max-height: 576px;
+  background: #fff;
+
+  border-radius: 10px;
+  padding-bottom: 24px;
+}
+
+.card__image {
+  width: 400px;
+  height: 272px;
+  object-fit: cover;
+
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 24px;
+}
+
+.card__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  margin: 0 24px 0 24px;
+
+  background: #fff;
+  height: 253px;
+}
+
+.card__date {
+  margin: 0 0 12px 0;
+  color: #b6bcbf;
+}
+
+.card__title {
+  font-family: 'Roboto-Slab-Regular', sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+
+  margin: 0 0 16px 0;
+  height: 60px;
+}
+
+.card__description {
+  margin: 0 0 18px 0;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+
+  height: 110px;
+}
+
+.card__name {
+  margin: 0;
+  color: #b6bcbf;
+  text-transform: uppercase;
+  bottom: 0;
+}

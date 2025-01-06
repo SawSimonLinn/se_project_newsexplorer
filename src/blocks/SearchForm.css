@@ -1,0 +1,26 @@
+@import url('../index.css');
+
+.search__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  font-family: 'Roboto-Slab-Regular', sans-serif;
+
+  padding: 80px 104px;
+  background: #f5f6f7;
+}
+
+.search__title {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+}
+
+.search__results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 24px;
+}
