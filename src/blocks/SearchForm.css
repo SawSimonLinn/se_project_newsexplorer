@@ -22,5 +22,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  gap: 24px;
+  gap: 16px;
+  margin: 0;
+}
+
+.search__button {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-style: 18px;
+  line-height: 24px;
+
+  margin: 64px 0 0 0;
+  padding: 20px 99px;
+  border: none;
+  border-radius: 80px;
+  background: #fff;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.search__button:hover {
+  background: #e8e8e8;
 }

@@ -8,10 +8,11 @@ const SearchForm = () => {
     <div className='search__container'>
       <h3 className='search__title'>Search results</h3>
       <ul className='search__results'>
-        {initialCards.slice(0, 3).map((card, index) => (
+        {initialCards.slice(0, initialCards.length).map((card, index) => (
           <ItemCard key={index} card={card} />
         ))}
       </ul>
+      <button className='search__button'>Show more</button>
     </div>
   );
 };

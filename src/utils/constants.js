@@ -21,4 +21,19 @@ export const initialCards = [
     description: `“The linking together of the Cascade and Death Canyon trails, at their heads, took place on October 1, 1933, and marked the first step in the realization of a plan whereby the hiker will be...`,
     name: 'National parks traveler',
   },
+  // {
+  //   imageUrl: 'https://shorturl.at/XqYqv',
+  //   date: 'March 16, 2020',
+  //   title: `Scientists Don't Know Why Polaris Is So Weird `,
+  //   description:
+  //     'Humans have long relied on the starry sky to push into new frontiers, sail to the very edge of the world and find their way back home again. Even animals look to the stars to guide them. ',
+  //   name: 'treehugger',
+  // },
+  // {
+  //   imageUrl: 'https://shorturl.at/B7lyh',
+  //   date: 'October 19, 2020',
+  //   title: 'Nostalgic Photos of Tourists in U.S. National Parks',
+  //   description: `Uri Løvevild Golman and Helle Løvevild Golman are National Geographic Explorers and conservation photographers who just completed a project and book they call their love letter to...`,
+  //   name: 'national geographic',
+  // },
 ];
