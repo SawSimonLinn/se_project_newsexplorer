@@ -6,11 +6,13 @@ import About from './About';
 import Footer from './Footer';
 import Navigation from './Navigation';
 import SearchForm from './SearchForm';
+import SignUpModal from './SignUpModal';
 
 const App = () => {
   return (
     <div>
       <Main />
+      <SignUpModal />
       <SearchForm />
       <About />
       <Navigation />
