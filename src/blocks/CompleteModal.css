@@ -1,0 +1,26 @@
+@import url('../index.css');
+
+.complete__modal_container {
+  padding: 46px 121px 46px 36px;
+  position: relative;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.compete__modal_btn {
+  font-family: 'Inter-Regular', sans-serif;
+  font-style: 18px;
+
+  border: none;
+  background: transparent;
+  color: #2f71e5;
+}
+
+.complete__modal_title {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1a1b22;
+
+  margin: 0 0 14px 0;
+}

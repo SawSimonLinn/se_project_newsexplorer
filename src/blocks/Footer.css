@@ -30,17 +30,20 @@
   align-items: center;
 }
 
-.footer__button {
-  background: transparent;
-  border: none;
-  color: #1a1b22;
+.footer__links {
   margin-right: 40px;
   padding: 0;
-  cursor: pointer;
+  list-style: none;
 }
 
 .footer__link {
+  list-style: none;
   margin-right: 24px;
+}
+
+.footer__item {
+  color: #1a1b22;
+  text-decoration: none;
 }
 
 .github__icon {

@@ -1,8 +1,8 @@
-import React from "react";
-import "../blocks/Navigation.css";
+import React from 'react';
+import '../blocks/Navigation.css';
 
 const Navigation = () => {
-  <div className="navigation__container">
+  <div className='navigation__container'>
     <h1>Navigation</h1>
   </div>;
 };

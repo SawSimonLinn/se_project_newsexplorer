@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ModalWithForm from './ModalWithForm';
 import { useFormWithValidation } from '../hooks/useForm';
 
-const SignUpModal = ({
+const SignInModal = ({
   isOpen,
   onClose,
   onLogin,
@@ -10,10 +10,10 @@ const SignUpModal = ({
   btnText,
   secondaryBtnText,
 }) => {
+  // const currentUser = useContext(CurrentUserContext);
   const inputValues = {
     email: '',
     password: '',
-    name: '',
   };
 
   const { values, handleChange, errors, isValid, resetForm } =
@@ -25,12 +25,12 @@ const SignUpModal = ({
   };
 
   useEffect(() => {
-    resetForm(inputValues);
+    resetForm();
   }, [isOpen, resetForm]);
 
   return (
     <ModalWithForm
-      title='Sign up'
+      title='Sign in'
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
@@ -64,21 +64,8 @@ const SignUpModal = ({
         required
         autoComplete='current-password'
       />
-      <label className='modal__label'>Username</label>
-      <input
-        type='name'
-        name='name'
-        placeholder='Enter your username'
-        value={values.name || ''}
-        onChange={handleChange}
-        className={`modal__input ${
-          errors.name ? 'modal__input_type_error' : ''
-        }`}
-        required
-        autoComplete='usename'
-      />
     </ModalWithForm>
   );
 };
 
-export default SignUpModal;
+export default SignInModal;

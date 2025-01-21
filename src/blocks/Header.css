@@ -43,23 +43,20 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
-.header__home::after {
-  color: #fff;
-  top: 50px;
-  height: 3px;
-
-  background: #fff;
-}
-
-.header__home:hover::after {
-  background: #fff;
+.header__home.active::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  border-bottom: 3px solid #ffffff;
+  left: -1px;
+  bottom: -30px;
 }
 
 .header__button {
-  /* width: 176px; */
-  /* height: 48px; */
   border: 1px solid #ffffff;
   border-radius: 100px;
 
