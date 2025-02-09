@@ -1,0 +1,29 @@
+import React, { useContext } from 'react';
+import SavedNewsHeader from './SavedNewsHeader/SavedNewsHeader';
+import SavedNewsCardList from './SavedNewsCardList/SavedNewsCardList';
+import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
+import { savedArticlesContext } from '../../contexts/savedArticlesContext';
+
+const SavedNews = () => {
+  const { savedArticles, setSavedArticles } = useContext(savedArticlesContext);
+
+  const handleRemoveArticle = articleToRemove => {
+    setSavedArticles(prevArticles =>
+      prevArticles.filter(article => article._id !== articleToRemove._id)
+    );
+  };
+
+  return (
+    <>
+      <Navigation />
+      <section className='saved'>
+        <SavedNewsHeader />
+        <SavedNewsCardList handleRemoveArticle={handleRemoveArticle} />
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default SavedNews;
