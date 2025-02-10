@@ -4,28 +4,28 @@
   background-color: #f5f6f7;
   padding: 40px 104px;
   height: auto;
-  width: auto;
+  margin: 0 auto;
 }
 
 .saved__news-cards-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-
+  max-width: 1440px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 600px) {
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
   .saved__news-card {
-    width: 688px;
     height: auto;
+    gap: 20px;
     padding: 32px 40px;
   }
   .saved__news-cards-container {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 900px;
     grid-gap: 16px;
   }
 }

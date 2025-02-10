@@ -206,15 +206,14 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 600px) {
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
   .nav__container {
-    width: 100%;
     padding: 0 40px;
   }
 
   .nav {
     height: 56px;
-    width: 688px;
+    margin: 0 auto;
   }
 
   .nav__user-container {
@@ -245,12 +244,7 @@
   }
 
   .nav__button-loggedin-white {
-    width: 100px;
-    height: 40px;
-  }
-
-  .nav__button-loggedin-black {
-    width: 100px;
+    width: 108px;
     height: 40px;
   }
 
@@ -318,8 +312,9 @@
     display: none;
   }
 
-  .nav__container {
-    /* width: 288px; */
+  .nav__buttons {
+    /* gap: 40px; */
+    display: none;
   }
 
   .nav__menu-button {
@@ -329,7 +324,6 @@
     height: 24px;
     border: none;
     cursor: pointer;
-    /* margin-left: auto; */
   }
 
   .nav__button-home,
