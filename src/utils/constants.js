@@ -2,8 +2,9 @@ export const APIKey = '0dce0737355a46c28c1d4c9dc4852bcc';
 const baseUrl = 'https://newsapi.org/v2/everything';
 const proxyUrl = 'https://nomoreparties.co/news/v2/everything';
 
-export const newsApiBaseUrl =
-  process.env.NODE_ENV === 'production' ? baseUrl : proxyUrl;
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+
+export { API_URL };
 
 const currentDate = new Date();
 

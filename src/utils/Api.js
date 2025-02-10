@@ -1,5 +1,5 @@
 export function getSavedArticles() {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     resolve([
       // {
       //   source: {
@@ -60,7 +60,7 @@ export function getSavedArticles() {
 }
 
 export function addSavedArticle(article, keyword) {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     resolve({
       _id: article.title,
       keyword: keyword,
@@ -75,7 +75,7 @@ export function addSavedArticle(article, keyword) {
 }
 
 export const removeSavedArticle = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     const response = {
       ok: true,
       status: 200,
