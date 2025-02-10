@@ -1,4 +1,9 @@
 export const APIKey = '0dce0737355a46c28c1d4c9dc4852bcc';
+const baseUrl = 'https://newsapi.org/v2/everything';
+const proxyUrl = 'https://nomoreparties.co/news/v2/everything';
+
+export const newsApiBaseUrl =
+  process.env.NODE_ENV === 'production' ? baseUrl : proxyUrl;
 
 const currentDate = new Date();
 

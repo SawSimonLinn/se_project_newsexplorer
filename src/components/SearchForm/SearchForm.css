@@ -77,81 +77,81 @@
   background: #2a65cc;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 600px) {
   .search-form {
     padding: 0 40px;
   }
 
   .search-form__container {
-    max-width: 400px;
+    max-width: 450px;
     margin-top: 50px;
   }
 
   .search-form__header {
-    width: 385px;
+    width: 445px;
     font-size: 36px;
     line-height: 40px;
   }
 
   .search-form__subHeader {
-    padding: 20px 0 40px;
-    font-size: 16px;
-    line-height: 20px;
+    padding: 16px 0 48px;
+    font-size: 18px;
   }
 
   .search-form__input {
-    padding: 18px 15px;
-    width: 370px;
-    font-size: 14px;
-    line-height: 18px;
+    padding: 18px 24px;
+    width: 400px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .search-form__button {
-    padding: 18px 30px;
-    width: 160px;
-    height: 56px;
-    font-size: 16px;
-    line-height: 18px;
+    padding: 18px 52px;
+    right: -2px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-width: 320px) {
   .search-form {
     padding: 0 10px;
   }
 
   .search-form__container {
-    margin: 70px auto 0;
+    margin: 0 auto 0;
     width: 280px;
   }
 
   .search-form__header {
-    font-size: 48px;
+    font-size: 36px;
     line-height: 40px;
-    margin-right: 0;
+    margin: 32px 0 0 0;
   }
 
   .search-form__subHeader {
-    font-size: 25px;
+    font-size: 18px;
     line-height: 24px;
-    width: 375px;
+    width: 288px;
+    margin: 16px 0 0 0;
+    padding: 0;
   }
 
   .search-form__input {
-    padding: 12px 15px;
-    width: 350px;
-    height: 35px;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 50px;
-    margin-right: 0;
+    padding: 0 16px;
+    width: 256px;
+    height: 56px;
+
+    margin: 120px 0 8px 0;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .search-form__button {
-    padding: 12px 20px;
-    width: 380px;
-    font-size: 14px;
-    line-height: 16px;
+    padding: 16px 116px;
+    margin: 0 0 32px 0;
+    font-size: 18px;
+    line-height: 24px;
     position: relative;
     right: 0;
     top: 10px;

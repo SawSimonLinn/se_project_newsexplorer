@@ -12,25 +12,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1320px;
-  gap: 46px;
 }
 
 .footer__copyright {
-  font-size: 16px;
   color: #b6bcbf;
-  margin: 0;
-  padding: 0;
-  font-style: normal;
-  line-height: 22px;
+
+  font-size: 16px;
 }
 
 .footer__links-wrapper {
-  display: flex;
-  gap: 20px;
-}
-
-.footer__content {
   display: flex;
   gap: 20px;
 }
@@ -41,9 +31,10 @@
   padding: 0;
 }
 
-.footer__link-triplenTen {
+.footer__link {
   font-size: 18px;
   cursor: pointer;
+  font-family: 'Roboto-Regular', sans-serif;
   font-style: normal;
   line-height: 24px;
   color: #1a1b22;
@@ -51,16 +42,8 @@
   text-decoration: none;
 }
 
-.footer__link-home {
-  font-size: 18px;
-  cursor: pointer;
-  font-family: 'Roboto-Regular', sans-serif;
-  font-style: normal;
-  line-height: 24px;
-  color: #1a1b22;
+.footer__home {
   margin-right: 30px;
-  list-style: none;
-  text-decoration: none;
 }
 
 .footer__link-icon {
@@ -77,10 +60,13 @@
   padding: 0 24px;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 600px) {
   .footer {
-    height: auto;
-    padding: 40px;
+    /* width: 768px; */
+    width: 100%;
+  }
+  .footer__container {
+    padding: 0 40px;
   }
 
   .footer__content {
@@ -90,7 +76,6 @@
   .footer__copyright {
     font-size: 14px;
     line-height: 18px;
-    text-align: center;
   }
 
   .footer__links {
@@ -98,45 +83,44 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-width: 320px) {
   .footer {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 20px;
+    width: 100%;
   }
 
+  .footer__container {
+    margin: 0 16px 22px 16px;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
   .footer__copyright {
-    text-align: center;
-    order: 2;
-    font-size: 20px;
-    line-height: 18px;
-  }
-
-  .footer__content {
-    margin-right: 20px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .footer__links-wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 10px;
+    gap: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    padding: 0;
   }
 
   .footer__links {
+    left: 0;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+  }
+
+  .footer__link {
+    font-size: 18px;
   }
 
   .footer__social-links {
-    margin-left: 130px;
+    margin: 22px 0 0 0;
   }
-
-  .footer__link-icon {
-    margin-left: 10px;
-  }
-
-  .footer__link-triplenTen {
-    margin-top: 10px;
+  .footer__link-github {
+    padding: 0 24px;
   }
 }

@@ -9,9 +9,10 @@ const SavedNews = () => {
   const { savedArticles, setSavedArticles } = useContext(savedArticlesContext);
 
   const handleRemoveArticle = articleToRemove => {
-    setSavedArticles(prevArticles =>
-      prevArticles.filter(article => article._id !== articleToRemove._id)
+    setSavedArticles(
+      savedArticles.filter(article => article._id !== articleToRemove._id)
     );
+    console.log(articleToRemove._id);
   };
 
   return (

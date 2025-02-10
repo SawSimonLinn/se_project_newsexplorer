@@ -12,14 +12,15 @@ function Footer() {
         <nav className='footer__links-wrapper'>
           <ul className='footer__links'>
             <li>
-              <a href='#' className='footer__link-home'>
+              <a href='#' className='footer__link footer__home' target='_blank'>
                 Home
               </a>
             </li>
             <li>
               <a
                 href='https://tripleten.com/'
-                className='footer__link-triplenTen'
+                className='footer__link footer__triplenTen'
+                target='_blank'
               >
                 TriplenTen
               </a>

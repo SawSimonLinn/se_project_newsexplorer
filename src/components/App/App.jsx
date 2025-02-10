@@ -30,7 +30,7 @@ import {
   addSavedArticle,
 } from '../../utils/Api';
 
-// * *  Contexts | useState * * //
+// * *  Contexts * * //
 function App() {
   const [activeModal, setActiveModal] = useState('');
   const [keyword, setkeyword] = useState('');
@@ -39,16 +39,16 @@ function App() {
     name: '',
     _id: '',
   });
-  const [savedArticles, setSavedArticles] = useState([]);
-  const [searchResult, setSearchResult] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [searchError, setSearchError] = useState(false);
-  const [isSuccessful, setIsSuccessful] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isLoggedInLoading, setIsLoggedInLoading] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
+  const [savedArticles, setSavedArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedInLoading, setIsLoggedInLoading] = useState(true);
+  const [isSuccessful, setIsSuccessful] = useState(false);
 
   const location = useLocation();
 
@@ -118,6 +118,10 @@ function App() {
           article => article._id !== newsData._id
         );
         setSavedArticles(unsavedNewsArticles);
+        localStorage.setItem(
+          'savedArticles',
+          JSON.stringify(unsavedNewsArticles)
+        );
       })
       .catch(err => {
         console.log(err);
@@ -141,10 +145,11 @@ function App() {
       addSavedArticle(newsData, keyword)
         .then(res => {
           const newArticle = { ...newsData, _id: res._id };
-          setSavedArticles([res, ...savedArticles]);
+          const updatedSavedArticles = [res, ...savedArticles];
+          setSavedArticles(updatedSavedArticles);
           localStorage.setItem(
             'savedArticles',
-            JSON.stringify([res, ...savedArticles])
+            JSON.stringify(updatedSavedArticles)
           );
           updateSearchResult(newArticle);
         })
@@ -175,11 +180,20 @@ function App() {
 
   // * * Handlers Sign In / Up  * *
   const handleSignIn = ({ email, password }) => {
-    authorize(email, password)
-      .then(res => {
-        setCurrentUser(res.data);
-        setIsLoggedIn(true);
-        localStorage.setItem('user', JSON.stringify(res.data));
+    authorize({ email, password })
+      .then(() => {
+        checkToken()
+          .then(res => {
+            setCurrentUser({
+              email: res.data.email,
+              _id: res.data._id,
+            });
+            setIsLoggedIn(true);
+            onClose();
+          })
+          .catch(err => {
+            console.log(err);
+          });
       })
       .catch(err => {
         console.log(err);
@@ -212,7 +226,6 @@ function App() {
     setCurrentPage(location.pathname);
   }, [location.pathname]);
 
-  // ? ? Side Effects | close modal on overlay click ? ? //
   useEffect(() => {
     const handleOverlayClick = e => {
       if (e.target.classList.contains('modal')) {
@@ -226,74 +239,29 @@ function App() {
     };
   }, []);
 
-  // // ? ? Side Effects | Check token and set user state ? ? //
-  // useEffect(() => {
-  //   setIsLoggedInLoading(true);
-  //   const token = localStorage.getItem('token');
-  //   if (token) {
-  //     checkToken(token)
-  //       .then(res => {
-  //         if (res) {
-  //           setCurrentUser(res.data);
-  //           setIsLoggedIn(true);
-  //           getSavedArticles()
-  //             .then(res => {
-  //               setSavedArticles(res);
-  //             })
-  //             .catch(err => {
-  //               console.log(err);
-  //             });
-  //         }
-  //       })
-  //       .catch(err => {
-  //         console.log(err);
-  //         setIsLoggedIn(false);
-  //         setCurrentUser(null);
-  //       })
-  //       .finally(() => {
-  //         setIsLoggedInLoading(false);
-  //       });
-  //   } else {
-  //     setIsLoggedInLoading(false);
-  //   }
-  // }, [isLoggedIn]);
-
   // ? ? Side Effects | check token ? ? //
   useEffect(() => {
     setIsLoggedInLoading(true);
-    const token = localStorage.getItem('token');
-    if (token) {
-      checkToken(token)
-        .then(res => {
-          if (res) {
-            setCurrentUser(res.data);
-            setIsLoggedIn(true);
-            return getSavedArticles();
-          }
-        })
-        .then(res => {
-          if (res) setSavedArticles(res);
-        })
-        .catch(err => {
-          console.log(err);
-          setError('Failed to fetch data');
-          setIsLoggedIn(false);
-          setCurrentUser(null);
-        })
-        .finally(() => {
-          setIsLoggedInLoading(false);
-        });
-    } else {
-      setIsLoggedInLoading(false);
-    }
+    checkToken()
+      .then(res => {
+        if (res) {
+          setCurrentUser(res.data);
+          getSavedArticles()
+            .then(articles => {
+              setSavedArticles(articles);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        setIsLoggedInLoading(false);
+      });
   }, [isLoggedIn]);
-
-  // ? ? Side Effects | check local storage for saved articles ? ? //
-  useEffect(() => {
-    const savedArticlesFromStorage =
-      JSON.parse(localStorage.getItem('savedArticles')) || [];
-    setSavedArticles(savedArticlesFromStorage);
-  }, []);
 
   // ? ? Side Effects | check local storage for user ? ? //
   useEffect(() => {
@@ -319,20 +287,10 @@ function App() {
 
   // ? ? Side Effects | get saved articles on load ? ? //
   useEffect(() => {
-    setIsLoading(true);
-    getSavedArticles()
-      .then(res => {
-        setSearchResult(res);
-        setHasSearched(true);
-        setSearchError(false);
-      })
-      .catch(err => {
-        console.log(err);
-        setSearchError(true);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    const storedArticles = localStorage.getItem('savedArticles');
+    if (storedArticles) {
+      setSavedArticles(JSON.parse(storedArticles));
+    }
   }, []);
 
   // * * Render * *
@@ -418,8 +376,6 @@ function App() {
                         }}
                       />
                     </div>
-
-                    {/* <Footer /> */}
                   </mobileContext.Provider>
                 </keywordContext.Provider>
               </savedArticlesContext.Provider>

@@ -1,13 +1,20 @@
 .page {
   margin: 0 auto;
+  width: 100%;
 }
 
 .page__content {
   width: 100%;
 }
 
+/* @media screen and (max-width: 768px) {
+  .page {
+    min-width: 600px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .page {
     min-width: 420px;
   }
-}
+} */

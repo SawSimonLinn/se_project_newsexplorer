@@ -1,15 +1,18 @@
 @import url('../../index.css');
 
+.nav__container {
+  padding: 20px 104px;
+  border-bottom: 1px solid rgba(246, 244, 244, 0.7);
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 104px;
-  border-bottom: 1px solid rgba(246, 244, 244, 0.7);
   font-family: 'Roboto-Regular', sans-serif;
 }
 
-.nav__saved-news-nav {
+.nav__saved {
   background-color: white;
 }
 
@@ -54,7 +57,7 @@
   display: none;
 }
 
-.nav__saved-news-menu-button {
+.nav__saved-btn {
   display: none;
 }
 
@@ -203,19 +206,19 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .nav__container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
   .nav {
-    padding: 5px 30px;
-    max-width: 768px;
+    height: 56px;
+    width: 688px;
   }
 
   .nav__user-container {
-    gap: 20px;
-  }
-
-  .nav__logo-white {
-    margin-left: 30px;
-    margin-top: 10px;
+    gap: 16px;
   }
 
   .nav__button-home {
@@ -229,6 +232,11 @@
 
   .nav__button-home.active::after {
     bottom: -18px;
+  }
+
+  .nav__logo {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .nav__saved__news-button-home {
@@ -246,18 +254,23 @@
     height: 40px;
   }
 
-  .nav__button-saved-articles-user {
+  .nav__button-saved-articles {
+    display: flex;
+    justify-content: center;
+    width: 160px;
     font-size: 16px;
     line-height: 20px;
   }
 
-  .nav__button-saved-articles {
+  .nav__button-saved-articles-user {
+    width: 160px;
     font-size: 16px;
     line-height: 20px;
   }
 
   .nav__button-saved-articles-user.active::after {
     margin-top: -39px;
+    width: 160px;
   }
 
   .nav__saved__news-username_white {
@@ -282,18 +295,31 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .nav {
-    padding: 10px;
-    height: 56px;
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .nav__container {
+    border-bottom: 1px solid rgba(141, 141, 141, 0.7);
+    padding: 0 16px;
   }
 
-  .nav__logo-white {
-    margin-left: auto;
+  .nav {
+    height: 56px;
+    width: 100%;
+  }
+
+  .nav__logo {
+    font-size: 16px;
+  }
+
+  .nav__logo-black {
+    text-decoration: none;
   }
 
   .nav__user-container {
     display: none;
+  }
+
+  .nav__container {
+    /* width: 288px; */
   }
 
   .nav__menu-button {
@@ -303,7 +329,7 @@
     height: 24px;
     border: none;
     cursor: pointer;
-    margin-left: auto;
+    /* margin-left: auto; */
   }
 
   .nav__button-home,
@@ -322,7 +348,7 @@
     display: none;
   }
 
-  .nav__saved-news-menu-button {
+  .nav__saved-btn {
     display: flex;
     background: transparent url(../../assets/Mobile-menu-black.svg) center
       no-repeat;

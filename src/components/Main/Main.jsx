@@ -35,6 +35,7 @@ function Main({
         handleSearch={handleSearch}
       />
       <main className='main'>
+        {/* <Preloader /> */}
         <div>
           {hasSearched && searchResult.length > 0 ? (
             <NewsCardList
