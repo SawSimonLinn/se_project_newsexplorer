@@ -4,7 +4,7 @@ This project is a React application built using Vite for fast development and op
 
 ## Deployed Site
 
-You can access the deployed site at: [https://sawsimonlinn.github.io/se_project_newsexplorer/](https://your-deployed-site-url.com)
+You can access the deployed site at: [NewsExplorer](https://sawsimonlinn.github.io/se_project_newsexplorer/)
 
 ![Deployment Status](https://img.shields.io/github/deployments/SawSimonLinn/se_project_newsexplorer/production?label=Production%20Deploy)
 
