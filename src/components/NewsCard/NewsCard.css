@@ -247,7 +247,13 @@
   }
 
   .news__keyword {
-    left: 10px;
+    left: 20px;
+    top: 5px;
+  }
+
+  .news__button-delete {
+    top: 17px;
+    right: 20px;
   }
 
   .news__button-bookmark {
