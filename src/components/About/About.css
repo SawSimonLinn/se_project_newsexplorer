@@ -2,10 +2,10 @@
 
 .about {
   margin: 0 auto;
+  background: #fff;
 }
 
 .about__container {
-  background: #fff;
   margin: 0 auto;
   padding: 80px 104px;
 

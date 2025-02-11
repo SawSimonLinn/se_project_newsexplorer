@@ -1,7 +1,7 @@
 @import url('../../index.css');
 
 .news__card-section {
-  padding: 0 104px;
+  padding: 80px 104px;
 
   display: flex;
   background: #f9f9f9;
@@ -10,7 +10,7 @@
 
 .news__cards-header {
   font-family: 'Roboto-Slab-Regular', sans-serif;
-  margin: 80px 0 64px 0;
+  margin: 0 0 64px 0;
   font-size: 40px;
 }
 
