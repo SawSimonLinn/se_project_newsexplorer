@@ -1,5 +1,10 @@
 export const APIKey = '0dce0737355a46c28c1d4c9dc4852bcc';
 
+export const baseURL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://nomoreparties.co/news/v2/everything'
+    : 'https://newsapi.org/v2/everything';
+
 const currentDate = new Date();
 
 export const parseCurrentDate = date => {

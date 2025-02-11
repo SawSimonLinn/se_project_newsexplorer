@@ -1,10 +1,10 @@
-import { APIKey, parsePreviousWeek } from "./constants";
+import { APIKey, baseURL, parsePreviousWeek } from './constants';
 
-export const getSearchResult = (keyWord) => {
+export const getSearchResult = keyWord => {
   if (!keyWord) {
     return Promise.reject(`Error: ${keyWord}`);
   }
-  const processServerResponse = (res) => {
+  const processServerResponse = res => {
     if (res.ok) {
       return res.json();
     } else {
@@ -13,15 +13,13 @@ export const getSearchResult = (keyWord) => {
   };
 
   return fetch(
-    `https://newsapi.org/v2/everything?q=${keyWord}&from=${parsePreviousWeek}&sortBy=popularity&apiKey=${APIKey}`
+    `${baseURL}?q=${keyWord}&from=${parsePreviousWeek}&sortBy=popularity&apiKey=${APIKey}`
   )
     .then(processServerResponse)
-    .then((res) => {
+    .then(res => {
       return {
         ...res,
-        articles: res.articles.filter(
-          (article) => article.title != "[Removed]"
-        ),
+        articles: res.articles.filter(article => article.title != '[Removed]'),
       };
     });
 };
