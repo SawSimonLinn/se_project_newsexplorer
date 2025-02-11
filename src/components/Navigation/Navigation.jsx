@@ -27,7 +27,11 @@ function Navigation({ onLoginClick, onLogout }) {
   };
 
   return (
-    <div className='nav__container'>
+    <div
+      className={`nav__container ${
+        currentPage === '/saved-news' ? 'nav__container-saved' : ''
+      }`}
+    >
       <nav
         className={`nav ${currentPage === '/saved-news' ? 'nav__saved' : ''} ${
           mobileMenuOpen ? 'nav__menu-open' : ''
@@ -38,10 +42,7 @@ function Navigation({ onLoginClick, onLogout }) {
             <p className='nav__logo-white nav__logo '>NewsExplorer</p>
           </NavLink>
         ) : (
-          <NavLink
-            to='/'
-            // className='nav__button-home'
-          >
+          <NavLink to='/'>
             <p className='nav__logo-black nav__logo '>NewsExplorer</p>
           </NavLink>
         )}

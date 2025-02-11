@@ -1,15 +1,17 @@
 .mobile {
+  width: 100%;
+  height: 100%;
+
   position: fixed;
   top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 98;
+  left: 0;
+  background-color: #00000050;
+
+  z-index: 10;
 }
 
 .mobile__content {
   background-color: #1a1b22;
-  margin-bottom: 0;
   z-index: 99;
 }
 
@@ -46,7 +48,7 @@
 }
 
 .mobile__link {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto-Regular', Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 56px;
@@ -77,30 +79,30 @@
 }
 
 .mobile__button-loggedin {
+  width: 120px;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  margin: 20px 0 20px 16px;
+  padding: 8px 14px 8px 15px;
   border: 1px solid white;
   border-radius: 20px;
   background-color: transparent;
-  margin-top: 20px;
-  margin-left: 10px;
   cursor: pointer;
-  width: 120px;
-  height: 40px;
-  margin-bottom: 20px;
 }
 
 .mobile__user-loggedin {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto-Regular', Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.3;
   color: white;
-  margin-left: 15px;
+  margin: 0;
 }
 
 .mobile__logout-icon {
   width: 20px;
   height: 20px;
-  margin-left: 20px;
+  margin-left: 13px;
 }

@@ -5,11 +5,19 @@
   border-bottom: 1px solid rgba(246, 244, 244, 0.7);
 }
 
+.nav__container-saved {
+  border-bottom: 1px solid #081d2d4d;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Roboto-Regular', sans-serif;
+}
+
+.nav__container .nav a {
+  text-decoration: none;
 }
 
 .nav__saved {
@@ -97,7 +105,7 @@
   height: 2px;
   border-bottom: 3px solid #fff;
   left: -5px;
-  bottom: -34px;
+  bottom: -36px;
 }
 
 .nav__saved-news {

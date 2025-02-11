@@ -37,6 +37,11 @@
   line-height: 24px;
 }
 
+.search-form__bar {
+  position: relative;
+  margin: 0 0 80px 0;
+}
+
 .search-form__input {
   padding: 22px 21px;
   width: 563px;
@@ -98,6 +103,10 @@
     font-size: 18px;
   }
 
+  .search-form__bar {
+    margin: 0 0 48px 0;
+  }
+
   .search-form__input {
     padding: 18px 24px;
     width: 400px;
@@ -137,19 +146,25 @@
     padding: 0;
   }
 
+  .search-form__bar {
+    margin: 0;
+    padding: 122px 0 32px 0;
+    gap: 16px;
+  }
+
   .search-form__input {
     padding: 0 16px;
     width: 256px;
     height: 56px;
 
-    margin: 120px 0 8px 0;
+    margin: 0;
     font-size: 16px;
     line-height: 22px;
   }
 
   .search-form__button {
     padding: 16px 116px;
-    margin: 0 0 32px 0;
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
     position: relative;

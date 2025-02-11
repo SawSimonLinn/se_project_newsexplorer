@@ -81,7 +81,7 @@
     padding: 0;
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
     background: #f9f9f9;
     flex-wrap: wrap;
   }
@@ -93,7 +93,7 @@
   }
 
   .news__cards-button {
-    margin: 16px 0 24px 0;
+    margin: 16px auto 24px auto;
     font-size: 18px;
     line-height: 24px;
     padding: 16px 98px 16px 99px;
