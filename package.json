@@ -1,5 +1,5 @@
 {
-  "homepage": "https://SawSimonLinn.github.io/se_project_newsexplorer/",
+  "homepage": "https://sawsimonlinn.github.io/se_project_newsexplorer/",
   "name": "news_explorer",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite --open",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b stage-1-frontend-api",
+    "dist": "gh-pages -d dist -b stage-1-frontend-api", 
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
