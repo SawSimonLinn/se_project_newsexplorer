@@ -48,18 +48,30 @@
 }
 
 .mobile__link {
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile__link-home {
+  height: 56px;
+}
+
+.mobile__link-container {
   font-family: 'Roboto-Regular', Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 56px;
-  color: white;
   text-decoration: none;
+
+  color: white;
   width: 100%;
-  margin: 16px 16px 0 16px;
   cursor: pointer;
 }
 
 .mobile__button {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,8 +82,8 @@
   cursor: pointer;
 
   color: white;
-  margin: 22px 16px 24px 16px;
-  padding: 16px 116px 16px 117px;
+  padding: 16px 101px 16px 102px;
+  margin: 22px 0 0 0;
 
   font-family: 'Roboto-Slab-Regular', Arial, sans-serif;
   font-size: 18px;
@@ -84,7 +96,7 @@
   align-items: center;
   justify-content: center;
 
-  margin: 20px 0 20px 16px;
+  margin: 22px 0 0 0;
   padding: 8px 14px 8px 15px;
   border: 1px solid white;
   border-radius: 20px;

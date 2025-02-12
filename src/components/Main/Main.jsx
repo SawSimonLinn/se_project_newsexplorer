@@ -5,7 +5,6 @@ import { useContext } from 'react';
 // ? ? Components ? ? //
 import About from '../About/About';
 import Header from '../header/header';
-import Footer from '../Footer/Footer';
 import NotFound from '../NotFound/NotFound';
 import Preloader from '../Preloader/Preloader';
 import NewsCardList from '../NewsCardList/NewsCardList';
@@ -58,7 +57,7 @@ function Main({
           )}
         </div>
         <About />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

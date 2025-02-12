@@ -29,6 +29,7 @@ import {
   removeSavedArticle,
   addSavedArticle,
 } from '../../utils/Api';
+import Footer from '../Footer/Footer';
 
 // * *  Contexts * * //
 function App() {
@@ -376,6 +377,7 @@ function App() {
                         }}
                       />
                     </div>
+                    <Footer />
                   </mobileContext.Provider>
                 </keywordContext.Provider>
               </savedArticlesContext.Provider>

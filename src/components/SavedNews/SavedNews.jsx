@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import SavedNewsHeader from './SavedNewsHeader/SavedNewsHeader';
 import SavedNewsCardList from './SavedNewsCardList/SavedNewsCardList';
 import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
 import { savedArticlesContext } from '../../contexts/savedArticlesContext';
 
 const SavedNews = () => {
@@ -22,7 +21,6 @@ const SavedNews = () => {
         <SavedNewsHeader />
         <SavedNewsCardList handleRemoveArticle={handleRemoveArticle} />
       </section>
-      <Footer />
     </>
   );
 };

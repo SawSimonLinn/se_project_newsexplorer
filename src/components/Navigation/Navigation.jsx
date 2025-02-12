@@ -28,37 +28,35 @@ function Navigation({ onLoginClick, onLogout }) {
 
   return (
     <div
-      className={`nav__container ${
-        currentPage === '/saved-news' ? 'nav__container-saved' : ''
-      }`}
+      className={`main-nav ${currentPage === '/saved-news' ? 'saved-nav' : ''}`}
     >
       <nav
-        className={`nav ${currentPage === '/saved-news' ? 'nav__saved' : ''} ${
-          mobileMenuOpen ? 'nav__menu-open' : ''
-        }`}
+        className={`main-nav__container ${
+          currentPage === '/saved-news' ? 'saved-nav__container' : ''
+        } ${mobileMenuOpen ? 'nav__menu-open' : ''}`}
       >
         {currentPage === '/' || mobileMenuOpen ? (
           <NavLink to='/'>
-            <p className='nav__logo-white nav__logo '>NewsExplorer</p>
+            <p className='main-nav__logo-white main-nav__logo '>NewsExplorer</p>
           </NavLink>
         ) : (
           <NavLink to='/'>
-            <p className='nav__logo-black nav__logo '>NewsExplorer</p>
+            <p className='main-nav__logo-black main-nav__logo '>NewsExplorer</p>
           </NavLink>
         )}
 
         {currentPage === '/' ? (
           <button
-            className={`nav__menu-button ${
-              activeModal === '' ? 'nav__menu-button_hidden' : ''
-            } ${mobileMenuOpen === true ? 'nav__menu-button_close' : ''}`}
+            className={`main-nav__btn ${
+              activeModal === '' ? 'main-nav__btn_hidden' : ''
+            } ${mobileMenuOpen === true ? 'main-nav__btn_close' : ''}`}
             onClick={handleMobileMenu}
           />
         ) : (
           <button
-            className={`nav__saved-btn ${
-              activeModal === '' ? 'nav__saved-btn_hidden' : ''
-            } ${mobileMenuOpen === true ? 'nav__saved-btn_close' : ''}`}
+            className={`saved-nav__btn ${
+              activeModal === '' ? 'saved-nav__btn_hidden' : ''
+            } ${mobileMenuOpen === true ? 'saved-nav__btn_close' : ''}`}
             onClick={handleMobileMenu}
           />
         )}
@@ -68,49 +66,50 @@ function Navigation({ onLoginClick, onLogout }) {
         )}
 
         {isLoggedIn && currentPage === '/' ? (
-          <nav className='nav__user-container'>
-            <NavLink to='/' className='nav__button-home'>
+          <nav className='main-nav__menu'>
+            <NavLink to='/' className='main-nav__menu-item'>
               Home
             </NavLink>
-            <NavLink to='/saved-news' className='nav__button-saved-articles'>
+            <NavLink to='/saved-news' className='main-nav__menu-saved'>
               Saved Articles
             </NavLink>
             <button
-              className={`nav__button-loggedin ${
-                currentPage === '/' ? 'nav__button-loggedin-white' : ''
+              className={`main-nav__menu-btn ${
+                currentPage === '/' ? 'main-nav__menu-btn-white' : ''
               }`}
               onClick={onLogout}
             >
-              <span className='nav__username'>{currentUser.name}</span>
+              <span className='main-nav__menu-username'>
+                {currentUser.name}
+              </span>
               <img
                 src={currentPage === '/' ? logOutWhite : logOutBlack}
                 alt='logout'
-                className='nav__logout-icon'
+                className='main-nav__menu-icon'
               />
             </button>
           </nav>
         ) : isLoggedIn && currentPage === '/saved-news' ? (
-          <nav className='nav__user-container'>
+          <nav className='main-nav__menu saved-nav__menu'>
             <NavLink to='/' className='nav__saved__news-button-home'>
               Home
             </NavLink>
-            <NavLink
-              to='/saved-news'
-              className='nav__button-saved-articles-user'
-            >
+            <NavLink to='/saved-news' className='main-nav__menu-saved-user'>
               Saved Articles
             </NavLink>
             <button
-              className={`nav__button-loggedin-black ${
-                currentPage === '/' ? 'nav__button-loggedin' : ''
+              className={`main-nav__menu-btn-black ${
+                currentPage === '/' ? 'main-nav__menu-btn' : ''
               }`}
               onClick={onLogout}
             >
-              <span className='nav__username'>{currentUser.name}</span>
+              <span className='main-nav__menu-username'>
+                {currentUser.name}
+              </span>
               <img
                 src={currentPage === '/' ? logOutWhite : logOutBlack}
                 alt='logout'
-                className='nav__logout-icon'
+                className='main-nav__menu-icon'
               />
             </button>
           </nav>
@@ -118,7 +117,7 @@ function Navigation({ onLoginClick, onLogout }) {
           <div
             className={`nav__buttons ${mobileMenuOpen ? 'nav__menu-open' : ''}`}
           >
-            <NavLink to='/' className='nav__button-home'>
+            <NavLink to='/' className='main-nav__menu-item'>
               Home
             </NavLink>
             <button className='nav__button-signin' onClick={onLoginClick}>

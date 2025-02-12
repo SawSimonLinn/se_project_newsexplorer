@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) and (min-width: 320px) {
+@media only screen and (max-width: 600px) {
   .saved__news-card {
     padding: 24px 16px;
   }

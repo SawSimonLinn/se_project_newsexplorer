@@ -249,7 +249,7 @@
   }
 }
 
-@media screen and (max-width: 600px) and (min-width: 320px) {
+@media screen and (max-width: 600px) {
   .modal__content {
     border-radius: 16px 16px 0 0;
     top: 40px;

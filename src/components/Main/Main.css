@@ -1,6 +1,4 @@
 .main {
-  min-height: 496px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

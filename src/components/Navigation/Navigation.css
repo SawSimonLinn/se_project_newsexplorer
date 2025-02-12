@@ -1,26 +1,26 @@
 @import url('../../index.css');
 
-.nav__container {
+.main-nav {
   padding: 18px 104px 14px;
   border-bottom: 1px solid rgba(246, 244, 244, 0.7);
 }
 
-.nav__container-saved {
+.saved-nav {
   border-bottom: 1px solid #081d2d4d;
 }
 
-.nav {
+.main-nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Roboto-Regular', sans-serif;
 }
 
-.nav__container .nav a {
+.main-nav .main-nav__container a {
   text-decoration: none;
 }
 
-.nav__saved {
+.saved-nav__container {
   background-color: white;
 }
 
@@ -30,7 +30,7 @@
   overflow: visible;
 }
 
-.nav__logo {
+.main-nav__logo {
   display: flex;
   align-items: center;
   margin: 0;
@@ -40,16 +40,16 @@
   font-size: 20px;
 }
 
-.nav__logo-white {
+.main-nav__logo-white {
   color: #fff;
 }
 
-.nav__logo-black {
+.main-nav__logo-black {
   text-decoration: none;
   color: #000;
 }
 
-.nav__user-container {
+.main-nav__menu {
   display: flex;
   align-items: center;
   gap: 70px;
@@ -61,15 +61,19 @@
   gap: 70px;
 }
 
-.nav__menu-button {
+.main-nav__btn {
   display: none;
 }
 
-.nav__saved-btn {
+.saved-nav__btn {
   display: none;
 }
 
-.nav__button-home {
+.saved-nav__menu {
+  gap: 34px;
+}
+
+.main-nav__menu-item {
   border: none;
   background: none;
   cursor: pointer;
@@ -96,15 +100,16 @@
   color: #fff;
   border: 1px solid #fff;
   font-size: 18px;
+  margin: 14px 0 12px 0;
 }
 
-.nav__button-home.active::after {
+.main-nav__menu-item.active::after {
   content: '';
   position: absolute;
   width: 60px;
   height: 2px;
   border-bottom: 3px solid #fff;
-  left: -5px;
+  left: -6.5px;
   bottom: -28px;
 }
 
@@ -114,7 +119,7 @@
   gap: 40px;
 }
 
-.nav__button-saved-articles {
+.main-nav__menu-saved {
   border: none;
   background: none;
   cursor: pointer;
@@ -139,7 +144,7 @@
   text-decoration: none;
 }
 
-.nav__button-saved-articles-user {
+.main-nav__menu-saved-user {
   border: none;
   background-color: transparent;
   text-decoration: none;
@@ -157,7 +162,7 @@
   width: 178px;
 }
 
-.nav__button-saved-articles-user.active::after {
+.main-nav__menu-saved-user.active::after {
   content: '';
   position: absolute;
   width: 178px;
@@ -166,7 +171,7 @@
   margin-bottom: -75px;
 }
 
-.nav__button-loggedin {
+.main-nav__menu-btn {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -175,7 +180,7 @@
   cursor: pointer;
 }
 
-.nav__button-loggedin-black {
+.main-nav__menu-btn-black {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -185,7 +190,7 @@
   background: transparent;
 }
 
-.nav__button-loggedin-white {
+.main-nav__menu-btn-white {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
@@ -195,7 +200,7 @@
   cursor: pointer;
 }
 
-.nav__username {
+.main-nav__menu-username {
   font-family: 'Roboto-Regular', sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -206,7 +211,7 @@
   border: 1px solid #ffffff;
 }
 
-.nav__logout-icon {
+.main-nav__menu-icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
@@ -214,30 +219,35 @@
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 600px) {
-  .nav__container {
-    padding: 0 40px;
+  .main-nav {
+    padding: 5px 40px;
   }
 
-  .nav {
+  .main-nav__container {
     height: 56px;
     margin: 0 auto;
   }
 
-  .nav__user-container {
+  .main-nav__menu {
     gap: 16px;
   }
 
-  .nav__button-home {
+  .main-nav__menu-item {
+    display: flex;
+    justify-content: center;
+
+    width: 64px;
     font-size: 16px;
     line-height: 20px;
   }
 
   .nav__buttons {
-    gap: 40px;
+    gap: 16px;
   }
 
-  .nav__button-home.active::after {
-    bottom: -18px;
+  .main-nav__menu-item.active::after {
+    bottom: -23px;
+    left: 2.5px;
   }
 
   .nav__logo {
@@ -250,12 +260,12 @@
     line-height: 20px;
   }
 
-  .nav__button-loggedin-white {
+  .main-nav__menu-btn-white {
     width: 108px;
     height: 40px;
   }
 
-  .nav__button-saved-articles {
+  .main-nav__menu-saved {
     display: flex;
     justify-content: center;
     width: 160px;
@@ -263,18 +273,18 @@
     line-height: 20px;
   }
 
-  .nav__button-saved-articles-user {
+  .main-nav__menu-saved-user {
     width: 160px;
     font-size: 16px;
     line-height: 20px;
   }
 
-  .nav__button-saved-articles-user.active::after {
+  .main-nav__menu-saved-user.active::after {
     margin-top: -23px;
     width: 160px;
   }
 
-  .nav__button-loggedin-black {
+  .main-nav__menu-btn-black {
     height: 40px;
   }
 
@@ -291,22 +301,22 @@
   }
 
   .nav__button-signin {
-    padding: 10px;
-    max-width: 145px;
+    padding: 8px 12px;
+    width: 152px;
     height: 40px;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
   }
 }
 
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .nav__container {
+@media screen and (max-width: 600px) {
+  .main-nav {
     border-bottom: 1px solid rgba(141, 141, 141, 0.7);
     padding: 0 16px;
   }
 
-  .nav {
+  .main-nav__container {
     height: 56px;
     width: 100%;
   }
@@ -319,7 +329,7 @@
     text-decoration: none;
   }
 
-  .nav__user-container {
+  .main-nav__menu {
     display: none;
   }
 
@@ -327,7 +337,7 @@
     display: none;
   }
 
-  .nav__menu-button {
+  .main-nav__btn {
     display: flex;
     background: url(../../assets/mobile-Menu.svg) center no-repeat;
     width: 24px;
@@ -336,23 +346,23 @@
     cursor: pointer;
   }
 
-  .nav__button-home,
+  .main-nav__menu-item,
   .nav__button-signin,
   .nav__saved__news-button-home,
-  .nav__button-saved-articles-user,
-  .nav__button-saved-articles,
+  .main-nav__menu-saved-user,
+  .main-nav__menu-saved,
   .nav__logout-black,
   .nav__logout,
   .nav__saved__news-username_black,
-  .nav__username-black,
-  .nav__username-white,
+  .main-nav__menu-username-black,
+  .main-nav__menu-username-white,
   .nav__saved__news-username_white,
   .nav__button-logout-white,
   .nav__button-logout-black {
     display: none;
   }
 
-  .nav__saved-btn {
+  .saved-nav__btn {
     display: flex;
     background: transparent url(../../assets/Mobile-menu-black.svg) center
       no-repeat;
