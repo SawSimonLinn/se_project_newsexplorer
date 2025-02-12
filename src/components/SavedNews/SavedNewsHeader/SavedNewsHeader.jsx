@@ -32,16 +32,16 @@ function SavedNewsHeader() {
 
   return (
     <nav className='saved__news'>
-      <h1 className='saved__news-title'>Saved Articles</h1>
-      <h2 className='saved__news-header'>
+      <h2 className='saved__news-title'>Saved Articles</h2>
+      <h3 className='saved__news-header'>
         {currentUser.name}, you have {userArticles.length} saved articles
         {userArticles.length === 1 ? 's' : ''}
-      </h2>
+      </h3>
       <div className='saved__news-Keyword-container'>
-        <p className='saved__news-Keywords-title'>By Keywords:</p>
-        <p className='saved__news-Keywords'>
+        <h4 className='saved__news-Keywords-title'>By Keywords:</h4>
+        <h5 className='saved__news-Keywords'>
           {getKeywordString(capitalizedFirstLetter)}
-        </p>
+        </h5>
       </div>
     </nav>
   );

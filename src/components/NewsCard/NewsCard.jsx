@@ -55,16 +55,16 @@ function NewsCard({
     <section className='news-card'>
       {currentPage === '/saved-news' && (
         <>
-          <h2 className='news__keyword'>
+          <h3 className='news__keyword'>
             {capitalizeFirstLetter(newsData.keyword)}
-          </h2>
-          <div
+          </h3>
+          <p
             className={`news__popup-text ${
               isHovered ? '' : 'news__popup-text_hidden'
             }`}
           >
             Remove from saved
-          </div>
+          </p>
           <button
             className='news__button-delete'
             onClick={handleRemoveClick}
@@ -91,13 +91,13 @@ function NewsCard({
       )}
       {!isLoggedIn && (
         <>
-          <div
+          <p
             className={`news__popup-text ${
               isHovered ? '' : 'news__popup-text_hidden'
             }`}
           >
             Sign in to save articles
-          </div>
+          </p>
 
           <button
             className='news__button-bookmark'
@@ -126,18 +126,18 @@ function NewsCard({
           />
         )}
 
-        <div className='news-card__text'>
-          <p className='news-card__date'>{formattedDate}</p>
-          <h3 className='news-card__title'>{newsData.title}</h3>
+        <section className='news-card__text'>
+          <h5 className='news-card__date'>{formattedDate}</h5>
+          <h4 className='news-card__title'>{newsData.title}</h4>
           <p className='news-card__description'>
             {newsData.text || newsData.description}
           </p>
           {newsData.source && (
-            <p className='news-card__source'>
+            <h5 className='news-card__source'>
               {newsData.source.name || newsData.source}
-            </p>
+            </h5>
           )}
-        </div>
+        </section>
       </a>
     </section>
   );
