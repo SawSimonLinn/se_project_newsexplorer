@@ -1,7 +1,25 @@
-export const APIkey = "0dce0737355a46c28c1d4c9dc4852bcc";
+import { APIKey, baseURL, parsePreviousWeek } from './constants';
 
-export const BASE_URL = "http:localhost:3000/news";
+export const getSearchResult = keyWord => {
+  if (!keyWord) {
+    return Promise.reject(`Error: ${keyWord}`);
+  }
+  const processServerResponse = res => {
+    if (res.ok) {
+      return res.json();
+    } else {
+      return Promise.reject(`Error: ${res.status}`);
+    }
+  };
 
-export const checkResponse = (res) => {
-  return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
+  return fetch(
+    `${baseURL}?q=${keyWord}&from=${parsePreviousWeek}&sortBy=popularity&apiKey=${APIKey}`
+  )
+    .then(processServerResponse)
+    .then(res => {
+      return {
+        ...res,
+        articles: res.articles.filter(article => article.title != '[Removed]'),
+      };
+    });
 };
