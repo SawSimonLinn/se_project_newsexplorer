@@ -27,13 +27,13 @@ function Navigation({ onLoginClick, onLogout }) {
   };
 
   return (
-    <div
+    <nav
       className={`main-nav ${currentPage === '/saved-news' ? 'saved-nav' : ''}`}
     >
-      <nav
+      <div
         className={`main-nav__container ${
           currentPage === '/saved-news' ? 'saved-nav__container' : ''
-        } ${mobileMenuOpen ? 'nav__menu-open' : ''}`}
+        } ${mobileMenuOpen ? 'main-nav__menu-open' : ''}`}
       >
         {currentPage === '/' || mobileMenuOpen ? (
           <NavLink to='/'>
@@ -91,14 +91,14 @@ function Navigation({ onLoginClick, onLogout }) {
           </nav>
         ) : isLoggedIn && currentPage === '/saved-news' ? (
           <nav className='main-nav__menu saved-nav__menu'>
-            <NavLink to='/' className='nav__saved__news-button-home'>
+            <NavLink to='/' className='saved-nav__menu-item'>
               Home
             </NavLink>
             <NavLink to='/saved-news' className='main-nav__menu-saved-user'>
               Saved Articles
             </NavLink>
             <button
-              className={`main-nav__menu-btn-black ${
+              className={`saved-nav__menu-btn-black  ${
                 currentPage === '/' ? 'main-nav__menu-btn' : ''
               }`}
               onClick={onLogout}
@@ -115,18 +115,20 @@ function Navigation({ onLoginClick, onLogout }) {
           </nav>
         ) : (
           <div
-            className={`nav__buttons ${mobileMenuOpen ? 'nav__menu-open' : ''}`}
+            className={`main-nav__buttons ${
+              mobileMenuOpen ? 'main-nav__menu-open' : ''
+            }`}
           >
             <NavLink to='/' className='main-nav__menu-item'>
               Home
             </NavLink>
-            <button className='nav__button-signin' onClick={onLoginClick}>
+            <button className='main-nav__button-signin' onClick={onLoginClick}>
               Sign in
             </button>
           </div>
         )}
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 

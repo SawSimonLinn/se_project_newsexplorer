@@ -251,13 +251,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .modal {
-    background: url(../../assets/background-mobile.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
   .modal__content {
     border-radius: 16px 16px 0 0;
     top: 54px;
