@@ -1,46 +1,48 @@
-# React + Vite Project
+# NewsExplorer
 
-This project is a React application built using Vite for fast development and optimized production builds. It includes some ESLint rules for code quality and consistency.
+A React-based web application that allows users to search for the latest news on any topic and save articles in their personal account. Powered by APIs for real-time updates.
 
-## Deployed Site
+![NewsExplorer Screenshot](https://example.com/screenshot.png)
 
-You can access the deployed site at: [NewsExplorer](https://sawsimonlinn.github.io/se_project_newsexplorer/)
+## Description
 
-![Deployment Status](https://img.shields.io/github/deployments/SawSimonLinn/se_project_newsexplorer/production?label=Production%20Deploy)
+NewsExplorer enables users to:
 
-## Technical Stack
+- Search for the latest news articles on any subject.
+- Save favorite articles to their personal account for easy access later.
+- Experience real-time updates powered by external APIs.
 
-- **React**: A JavaScript library for building user interfaces.
-- **Vite**: A build tool that provides a fast development server and optimized production builds.
-- **ESLint**: A tool for identifying and fixing problems in JavaScript code.
-- **LocalStorage**: Used to persist favorite saved articles across page refreshes.
+## Features
 
-## Installation
+- **Search Functionality:** Quickly find news articles on any subject.
+- **Personal Account:** Save and manage your favorite articles.
+- **Responsive Design:** Enjoy a seamless experience across devices.
 
-To get started with the project, follow these steps:
+![Search Feature GIF](https://example.com/search-feature.gif)
 
-1. Clone the repository:
+## Live Demo
+
+Check out the live version of the project here: [NewsExplorer Live Demo](https://sawsimonlinn.github.io/se_project_newsexplorer/)
+
+## Demo Video
+
+For a walkthrough of the application's features, watch the demo video:
+
+[![NewsExplorer Demo Video](https://example.com/demo-thumbnail.png)](https://example.com/demo-video.mp4)
+
+## Deployment and System Requirements
+
+To run this project locally, ensure you have the following:
+
+- **Node.js:** Version 14.x or higher
+- **npm:** Version 6.x or higher
+- **React:** Version 17.x or higher
+- **Vite:** Version 2.x or higher
+
+### Deployment Instructions:
+
+1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/SawSimonLinn/se_project_newsexplorer/tree/stage-1-frontend-api
-
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
+   git clone https://github.com/SawSimonLinn/se_project_newsexplorer.git
    cd se_project_newsexplorer
-
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
