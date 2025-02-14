@@ -68,7 +68,7 @@ To run this project locally, ensure you have the following:
 
 5. Deploy the production build:
 
-The production-ready files will be in the `dist` folder. You can deploy these files to your preferred hosting service.
+   The production-ready files will be in the `dist` folder. You can deploy these files to your preferred hosting service.
 
 ### Future Improvements
 
