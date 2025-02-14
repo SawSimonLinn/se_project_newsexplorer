@@ -2,7 +2,7 @@
 
 A React-based web application that allows users to search for the latest news on any topic and save articles in their personal account. Powered by APIs for real-time updates.
 
-![NewsExplorer Screenshot](https://example.com/screenshot.png)
+![NewsExplorer Screenshot](./src/assets/screenshot_newsexplorer.png)
 
 ## Description
 
@@ -18,7 +18,7 @@ NewsExplorer enables users to:
 - **Personal Account:** Save and manage your favorite articles.
 - **Responsive Design:** Enjoy a seamless experience across devices.
 
-![Search Feature GIF](https://example.com/search-feature.gif)
+![Search Feature GIF](./src/assets/ezgif-1fad73a214694b.gif)
 
 ## Live Demo
 
@@ -28,7 +28,7 @@ Check out the live version of the project here: [NewsExplorer Live Demo](https:/
 
 For a walkthrough of the application's features, watch the demo video:
 
-[![NewsExplorer Demo Video](https://example.com/demo-thumbnail.png)](https://example.com/demo-video.mp4)
+[![NewsExplorer Demo Video](https://demirsondaj.com.tr/wp-content/uploads/demo/placeholder.svg)](https://example.com/demo-video.mp4)
 
 ## Deployment and System Requirements
 
@@ -46,3 +46,32 @@ To run this project locally, ensure you have the following:
    ```bash
    git clone https://github.com/SawSimonLinn/se_project_newsexplorer.git
    cd se_project_newsexplorer
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+
+   ```bash
+   npm run build
+   ```
+
+5. Deploy the production build:
+
+The production-ready files will be in the `dist` folder. You can deploy these files to your preferred hosting service.
+
+### Future Improvements
+
+- Enhance User Interactions: Implement animations using CSS and JavaScript to achieve a more dynamic user experience.
+- Expand Photo Gallery: Allow users to categorize photos using tags to achieve better organization.
+- Improve Accessibility: Conduct an accessibility audit using tools like Lighthouse to achieve a more inclusive design.
