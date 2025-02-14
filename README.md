@@ -71,7 +71,6 @@ To run this project locally, ensure you have the following:
    The production-ready files will be in the `dist` folder. You can deploy these files to your preferred hosting service.
 
 ### Future Improvements
-
-- Enhance User Interactions: Implement animations using CSS and JavaScript to achieve a more dynamic user experience.
-- Expand Photo Gallery: Allow users to categorize photos using tags to achieve better organization.
-- Improve Accessibility: Conduct an accessibility audit using tools like Lighthouse to achieve a more inclusive design.
+- Enhance Search Accuracy: Improve the search algorithm using natural language processing to achieve more relevant results.
+- User Authentication: Implement OAuth2.0 for secure and seamless user login experiences.
+- Dark Mode: Add a dark mode feature to enhance user experience during nighttime browsing.
