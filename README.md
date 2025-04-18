@@ -1,9 +1,6 @@
 # NewsExplorer
 
 A React-based web application that allows users to search for the latest news on any topic and save articles in their personal account. Powered by APIs for real-time updates.
-
-![NewsExplorer Screenshot](./src/assets/screenshot_newsexplorer.png)
-
 ## Description
 
 NewsExplorer enables users to:
