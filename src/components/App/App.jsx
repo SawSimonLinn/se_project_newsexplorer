@@ -17,7 +17,7 @@ import { mobileContext } from '../../contexts/mobileContext';
 import { keywordContext } from '../../contexts/keyWordContext';
 import { currentPageContext } from '../../contexts/currentPageContext';
 import { hasSearchedContext } from '../../contexts/hasSearchedContext';
-import { currentUserContext } from '../../contexts/currentUserContext';
+import { currentUserContext } from '../../contexts/CurrentUserContext';
 import { searchResultContext } from '../../contexts/searchResultContext';
 import { savedArticlesContext } from '../../contexts/savedArticlesContext';
 

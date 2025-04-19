@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { keywordContext } from '../../contexts/keyWordContext';
 import { savedArticlesContext } from '../../contexts/savedArticlesContext';
 import { currentPageContext } from '../../contexts/currentPageContext';
-import { currentUserContext } from '../../contexts/currentUserContext';
+import { currentUserContext } from '../../contexts/CurrentUserContext';
 import { useContext, useEffect, useState } from 'react';
 
 function NewsCard({

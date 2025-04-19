@@ -10,7 +10,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 
 import { currentPageContext } from '../../contexts/currentPageContext';
 import { mobileContext } from '../../contexts/mobileContext';
-import { currentUserContext } from '../../contexts/currentUserContext';
+import { currentUserContext } from '../../contexts/CurrentUserContext';
 
 function Navigation({ onLoginClick, onLogout }) {
   const { currentPage, activeModal } = useContext(currentPageContext);

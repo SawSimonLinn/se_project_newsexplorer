@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
 import ModalWithForm from './ModalWithForm';
 import { useForm } from '../../Hooks/useForm';
-import { currentUserContext } from '../../contexts/currentUserContext';
+import { currentUserContext } from '../../contexts/CurrentUserContext';
 const SigninModal = ({
   isOpen,
   onClose,

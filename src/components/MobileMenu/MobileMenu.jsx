@@ -2,7 +2,7 @@ import './MobileMenu.css';
 import logOutWhite from '../../assets/logout-White.svg';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { currentUserContext } from '../../contexts/currentUserContext';
+import { currentUserContext } from '../../contexts/CurrentUserContext';
 
 const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
   const { isLoggedIn, currentUser } = useContext(currentUserContext);
