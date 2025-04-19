@@ -1,7 +1,7 @@
 import ModalWithForm from './ModalWithForm';
 import { useEffect, useContext } from 'react';
 import { useForm } from '../../Hooks/useForm';
-import { currentUserContext } from '../../contexts/CurrentUserContext';
+import { currentUserContext } from '../../contexts/currentUserContext';
 
 function RegisterModal({
   onClose,

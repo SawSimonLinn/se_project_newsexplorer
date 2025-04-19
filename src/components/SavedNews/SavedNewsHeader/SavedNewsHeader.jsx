@@ -1,6 +1,6 @@
 import './SavedNewsHeader.css';
 import { useContext } from 'react';
-import { currentUserContext } from '../../../contexts/CurrentUserContext';
+import { currentUserContext } from '../../../contexts/currentUserContext';
 import { savedArticlesContext } from '../../../contexts/savedArticlesContext';
 
 function SavedNewsHeader() {
