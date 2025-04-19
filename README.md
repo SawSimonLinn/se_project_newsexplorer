@@ -15,8 +15,6 @@ NewsExplorer enables users to:
 - **Personal Account:** Save and manage your favorite articles.
 - **Responsive Design:** Enjoy a seamless experience across devices.
 
-![Search Feature GIF](./src/assets/ezgif-1fad73a214694b.gif)
-
 ## Live Demo
 
 Check out the live version of the project here: [NewsExplorer Live Demo](https://sawsimonlinn.github.io/se_project_newsexplorer/)
